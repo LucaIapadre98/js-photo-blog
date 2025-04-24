@@ -5,7 +5,7 @@ header{
     background-image: url("../img/wall.png");
 }
 .container-title{
-    font-size: 85px;
+    font-size: 80px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 main{
@@ -32,7 +32,11 @@ main{
 
 .col-4 .card .card-title{
     margin: 0 15px;
-    padding: 10px 0;
+    padding: 10px 0 25px 0;
+}
+.col-4 .card .card-title h5{
+    font-size: 17px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 /*Media query*/
@@ -45,6 +49,12 @@ main{
         padding: 10px; 
         min-width: 50%
     }
+    .col-4 .card #logo{
+        width: 45px;
+        height: 45px;
+        margin: 0 125px;
+        padding: 0;
+     }
 
 }
 /*Media query*/
