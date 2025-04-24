@@ -13,19 +13,46 @@ main{
 }
 .container-card{
     padding: 30px 200px;
+   
 }
 .container-card .col-4{
-    padding: 10px;
+    padding: 10px; 
+    min-width: 33.3%
 }
 .col-4 .card .card-image{
-    border-top: url("../img/pin.svg");
-    background-color: green;
+    background-color: #48bd48;
     margin: 15px;
     height: 250px;
 }
+
 .col-4 .card .card-title{
     margin: 0 15px;
     padding: 10px 0;
+}
+
+/*Media query*/
+@media screen and (max-width: 790px){
+    .container-card{
+        padding: 15px 100px;
+       
+    }
+    .container-card .col-4{
+        padding: 10px; 
+        min-width: 50%
+    }
+
+}
+/*Media query*/
+@media screen and (max-width: 507px){
+    .container-card{
+        padding: 10px 100px;
+       
+    }
+    .container-card .col-4{
+        padding: 10px; 
+        min-width: 100%
+    }
+
 }
 
 
