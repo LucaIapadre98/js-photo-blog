@@ -5,16 +5,37 @@ header{
     background-image: url("../img/wall.png");
 }
 .container-title{
-    font-size: 90px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 85px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 main{
     background-image: url("../img/cork.png");
-    height: 598px;
-    display: flex;
-    justify-content: center;
 }
 .container-card{
-    flex-direction: column;
-    flex-wrap: wrap;
+    padding: 30px 200px;
 }
+.container-card .col-4{
+    padding: 10px;
+}
+.col-4 .card .card-image{
+    border-top: url("../img/pin.svg");
+    background-color: green;
+    margin: 15px;
+    height: 250px;
+}
+.col-4 .card .card-title{
+    margin: 0 15px;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+   
+
+
