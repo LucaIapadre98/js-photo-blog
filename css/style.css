@@ -1,13 +1,20 @@
-body{
-    background-image: url(img.wall.png);
-}
-
 header{
-    height: 150px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/wall.png");
+}
+.container-title{
+    font-size: 90px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+main{
+    background-image: url("../img/cork.png");
+    height: 598px;
     display: flex;
     justify-content: center;
 }
-.container-title{
-    font-size: 80px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.container-card{
+    flex-direction: column;
+    flex-wrap: wrap;
 }
