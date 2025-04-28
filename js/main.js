@@ -2,11 +2,12 @@ const postsContainer = document.querySelector("#container-posts");
 const layoverEl = document.querySelector(".layover");
 const closeBtnEl = document.querySelector(".btn");
 
+
+
 axios.get("https://lanciweb.github.io/demo/api/pictures/")
     .then (response => {
         const posts= response.data;
         console.log(posts);
-
 
         let cardHtml = "";
 
@@ -18,14 +19,13 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
 
         const cards = document.querySelectorAll(".card");
         cards.forEach(card => {
-            card.addEventListener ("click", () => {
-                const postId = parseInt( card.getAttribute("data-post-id"));
-                console.log(postId);
-
-                const postClicked = posts.find(post => post.id === postId);
+            card.addEventListener ("click", () => {                                   
+                const postId = card.getAttribute("data-post-id"); 
+                console.log(postId);       
+                const postClicked = posts.find(post => post.id == postId);
                 console.log(postClicked);
-                layoverEl.classList.add("d-block");
                 closeBtnEl.classList.add("d-block");
+                layoverEl.classList.add("d-block");
                 closeBtnEl.addEventListener("click", () => {
                     layoverEl.classList.remove("d-block");
                     closeBtnEl.classList.remove("d-block"); 
@@ -33,6 +33,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             })
         })
     })
+
 
 const generatePostCard = (post) => {
     const cardHtml = `

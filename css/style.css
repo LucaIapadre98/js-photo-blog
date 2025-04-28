@@ -19,7 +19,6 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 .container-card .col-4{
     padding: 10px; 
