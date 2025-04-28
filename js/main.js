@@ -19,18 +19,18 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
         const cards = document.querySelectorAll(".card");
         cards.forEach(card => {
             card.addEventListener ("click", () => {
-            const postId = parseInt( card.getAttribute("data-post-id"));
-            console.log(postId);
+                const postId = parseInt( card.getAttribute("data-post-id"));
+                console.log(postId);
 
-            const postClicked = posts.find(post => post.id === postId);
-            console.log(postClicked);
-            layoverEl.classList.add("d-block");
-            closeBtnEl.classList.add("d-block");
-            closeBtnEl.addEventListener("click", () => {
-                layoverEl.classList.remove("d-block");
-                closeBtnEl.classList.remove("d-block"); 
+                const postClicked = posts.find(post => post.id === postId);
+                console.log(postClicked);
+                layoverEl.classList.add("d-block");
+                closeBtnEl.classList.add("d-block");
+                closeBtnEl.addEventListener("click", () => {
+                    layoverEl.classList.remove("d-block");
+                    closeBtnEl.classList.remove("d-block"); 
+                })
             })
-        })
         })
     })
 
