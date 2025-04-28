@@ -12,17 +12,18 @@ main{
     background-image: url("../img/cork.png");
 }
 .container-card{
-    padding: 30px 260px;   
+    padding: 30px 280px;   
 }
 .container-card .col-4{
     padding: 10px; 
     min-width: 33.3%;
 }
 .col-4 .card #logo{
-   width: 45px;
-   height: 45px;
-   margin: 0 130px;
+   width: 30px;
+   height: 30px;
+
    padding: 0;
+   transform: translate(135px, -30%);
 }
 .col-4 .card .card-image{
     background-color: #48bd48;
@@ -52,8 +53,9 @@ main{
     .col-4 .card #logo{
         width: 45px;
         height: 45px;
-        margin: 0 125px;
+     
         padding: 0;
+        transform: translate(140px, 0%);
      }
 
 }
@@ -67,6 +69,14 @@ main{
         padding: 10px; 
         min-width: 100%
     }
+    .col-4 .card #logo{
+        width: 45px;
+        height: 45px;
+     
+        padding: 0;
+        transform: translate(140px, 0%);
+     }
+
 
 }
 
