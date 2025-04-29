@@ -1,29 +1,29 @@
-const postsContainer = document.querySelector("#container-posts");
-const layoverEl = document.querySelector(".layover");
+const postsContainer = document.querySelector("#container-posts");       
+const layoverEl = document.querySelector(".layover");                 // chiamo le varie classi per il collegamento //
 const closeBtnEl = document.querySelector(".btn");
 
 
 
-axios.get("https://lanciweb.github.io/demo/api/pictures/")
+axios.get("https://lanciweb.github.io/demo/api/pictures/")          // chiamo l'API per il caricamento delle immagini //
     .then (response => {
         const posts= response.data;
         console.log(posts);
 
-        let cardHtml = "";
+        let cardHtml = "";                                          // genero una card vuote //
 
         posts.forEach(post => {
-            cardHtml += generatePostCard(post);
+            cardHtml += generatePostCard(post);                       // genero una card per ogni post //
         });
 
-        postsContainer.innerHTML = cardHtml;
+        postsContainer.innerHTML = cardHtml;                        // aggiungo le card nell'HTML //
 
-        const cards = document.querySelectorAll(".card");
+        const cards = document.querySelectorAll(".card");               
         cards.forEach(card => {
-            card.addEventListener ("click", () => {                                   
+            card.addEventListener ("click", () => {                         // aggiungo funzione alle card //
                 const postId = card.getAttribute("data-post-id"); 
                 console.log(postId);    
-                const postClicked = posts.find(post => post.id == postId);
-                closeBtnEl.classList.add("d-block");
+                const postClicked = posts.find(post => post.id == postId);      // aggiungo la funzione al post cliccato //
+                closeBtnEl.classList.add("d-block");                              // aggiungo le varie classi dopo la funzione //
                 layoverEl.classList.add("d-block");
                 if(postClicked.id == 1,2,3,4,5,6){
                     layoverEl.innerHTML = `
