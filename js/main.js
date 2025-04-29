@@ -21,11 +21,25 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
         cards.forEach(card => {
             card.addEventListener ("click", () => {                                   
                 const postId = card.getAttribute("data-post-id"); 
-                console.log(postId);       
+                console.log(postId);    
                 const postClicked = posts.find(post => post.id == postId);
-                console.log(postClicked);
                 closeBtnEl.classList.add("d-block");
                 layoverEl.classList.add("d-block");
+                if(postClicked.id == 1,2,3,4,5,6){
+                    layoverEl.innerHTML = `
+                    <div class="col-4">
+                        <div class="card" data-post-id="${postClicked.id}">
+                            <img  src="#">
+                            <div class="card-image">
+                                <img src="${postClicked.url}" alt="${postClicked.title}">
+                            </div>
+                            <div class="card-title">
+                                <span>${postClicked.date}</span>
+                                <h5>${postClicked.title}</h5>
+                            </div>
+                        </div>
+                    </div>`;
+                }
                 closeBtnEl.addEventListener("click", () => {
                     layoverEl.classList.remove("d-block");
                     closeBtnEl.classList.remove("d-block"); 

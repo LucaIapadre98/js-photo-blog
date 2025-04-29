@@ -19,6 +19,7 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 .container-card .col-4{
     padding: 10px; 
@@ -61,11 +62,25 @@ main{
     z-index: 10;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(7px);
 }
-.layover .visible{
-    display: block;
+.layover .card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+  
 }
+.layover .card .card-image{
+   
+    margin: 0 15px;
+    max-width: 100%;
+}
+
+
+
 .btn{
     display: none;
     position: fixed;
@@ -73,6 +88,8 @@ main{
     bottom: 20px;
     right: 20px;
 }
+    
+
 
 /*Media query*/
 @media screen and (max-width: 790px){
