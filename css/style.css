@@ -19,7 +19,7 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    cursor: pointer;
+    
 }
 .container-card .col-4{
     padding: 10px; 
@@ -28,6 +28,7 @@ main{
 }
 .container-card .card{
     width: 100%;
+    cursor: pointer;
 }
 .container-card .card:hover{
     transform: rotate(10deg);
@@ -81,12 +82,9 @@ main{
   
 }
 .layover .card .card-image{
-   
     margin: 0 15px;
     max-width: 100%;
 }
-
-
 
 .btn{
     display: none;
@@ -95,9 +93,8 @@ main{
     bottom: 20px;
     right: 20px;
 }
+
     
-
-
 /*Media query*/
 @media screen and (max-width: 790px){
     .container-card{

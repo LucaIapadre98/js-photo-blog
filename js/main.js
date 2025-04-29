@@ -12,7 +12,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")          // chiamo l'
         let cardHtml = "";                                          // genero una card vuote //
 
         posts.forEach(post => {
-            cardHtml += generatePostCard(post);                       // genero una card per ogni post //
+            cardHtml += generatePostCard(post);                      
         });
 
         postsContainer.innerHTML = cardHtml;                        // aggiungo le card nell'HTML //
@@ -25,8 +25,8 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")          // chiamo l'
                 const postClicked = posts.find(post => post.id == postId);      // aggiungo la funzione al post cliccato //
                 closeBtnEl.classList.add("d-block");                              // aggiungo le varie classi dopo la funzione //
                 layoverEl.classList.add("d-block");
-                if(postClicked.id == 1,2,3,4,5,6){
-                    layoverEl.innerHTML = `
+                if(postClicked.id == postId){                                 // condizione che SE l'Id del post cliccato è uguale all'Id del post apro immagine //                                                                                                   
+                    layoverEl.innerHTML = `                                        
                     <div class="col-4">
                         <div class="card" data-post-id="${postClicked.id}">
                             <img  src="#">
@@ -39,9 +39,9 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")          // chiamo l'
                             </div>
                         </div>
                     </div>`;
-                }
-                closeBtnEl.addEventListener("click", () => {
-                    layoverEl.classList.remove("d-block");
+                }                                                                // aggiungo l'immagine cliccata //
+                closeBtnEl.addEventListener("click", () => {                           // condizione di chiusura del bottone //
+                    layoverEl.classList.remove("d-block");                                // rimuovo le classi precedentemente aggiunte //
                     closeBtnEl.classList.remove("d-block"); 
                 })
             })
@@ -49,7 +49,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")          // chiamo l'
     })
 
 
-const generatePostCard = (post) => {
+const generatePostCard = (post) => {                                             // genero una card per ogni post //
     const cardHtml = `
             <div class="col-4">
                 <div class="card" data-post-id="${post.id}">
